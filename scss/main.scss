@@ -11,6 +11,10 @@
         font-size: 1.2em;
     }
 
+    .navbar-link-mobile{
+        display: none !important;
+    }
+
     .navbar-link{
         padding: .400rem .600rem;
         font-weight: $fontWeightNormal;
@@ -138,6 +142,20 @@
 
             p{
                 margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small){
+    .navbar{
+        .navbar-link-mobile{
+            display: block !important;
+        }
+
+        .mobile-nav{
+            .btn{
+                display: none;
             }
         }
     }
