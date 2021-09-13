@@ -1,0 +1,144 @@
+@import 'variables';
+@import 'global';
+
+.navbar{
+    width: 100%;
+    padding: 1.1rem 0;
+    
+    .logo{
+        color: $blackColor;
+        font-weight: $fontWeightBold;
+        font-size: 1.2em;
+    }
+
+    .navbar-link{
+        padding: .400rem .600rem;
+        font-weight: $fontWeightNormal;
+        color: $blackColor;
+        font-size: .9rem;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        &.btn{
+            font-weight: $fontWeightMedium;
+            transition: background-color .3s;
+        }
+        
+        &.btn:hover{
+            text-decoration: none;
+        }
+    }
+
+    .ham-menu{
+        margin-left: .8rem;
+        display: none;
+
+        img{
+            cursor: pointer;
+        }
+    }
+}
+
+.hero{
+    margin: auto;
+    padding: 4rem 0 6rem 0;
+
+    p{
+        max-width: 600px;
+    }
+}
+
+.section{
+    padding: 4rem 1rem;
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        .section-item img{
+            width: 100%;
+        }
+
+        p{
+            max-width: 600px;
+        }
+
+    }
+}
+
+.footer{
+    margin-top: 5rem;
+    padding: 2rem 0;
+    background-color: $grayColor2;
+    border-top: 1px solid $grayColor3;
+
+    p{
+        font-weight: $fontWeightMedium;
+        color: $grayColor;
+    }
+}
+
+@media screen and (max-width: $medium){
+    .navbar{
+        .navbar-list{
+            width: 100%;
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            background-color: #FFF;
+            flex-direction: column;
+            justify-content: center;
+            visibility: hidden;
+            border-bottom: 2px solid $grayColor3;
+            padding: 1rem 2rem 2rem 2rem;
+
+            .navbar-link{
+                width: 100%;
+                padding: 1rem;
+                text-align: center;
+                margin-bottom: .5rem;
+
+                &.btn{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+
+        .navbar-list.active{
+            visibility: visible;
+        }
+
+        .ham-menu{
+            display: block;
+        }
+    }
+    
+    .hero{
+        text-align: center;
+
+        p{
+            margin: 0 auto;
+        }
+    }
+
+    .section{
+        padding: 1rem;
+
+        .container{
+            text-align: center;
+            grid-template-columns: 1fr;
+
+            .section-item img{
+                display: none;
+            }
+
+            p{
+                margin: 0 auto;
+            }
+        }
+    }
+}
